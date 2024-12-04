@@ -1,5 +1,7 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import React, { HTMLAttributes, useEffect, useRef, useState } from "react";
+import { SpaceButton } from "../spacebutton";
 
 const Stopwatch = () => {
   const [time, setTime] = useState(0);
@@ -20,39 +22,24 @@ const Stopwatch = () => {
 
   const toggleTime = () => setRunning(!running);
 
-  const handleKey = () => {
-    console.log("works");
-    toggleTime();
-  };
-
-  const getStartorStop = () => {
-    if (running) {
-      return "Stop";
-    }
-    return "Start";
-  };
-
   const changeIfActive = `${running ? "text-blue-300" : "text-white"}`;
 
   return (
     <div className="stopwatch text-white text-center">
       <div className={`numbers capitalize ${changeIfActive}`}>
-        {/* <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span> */}
+        <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
         <NumberDisplay className={`text-9xl`}>
           {("0" + Math.floor((time / 1000) % 60)).slice(-2)}:
         </NumberDisplay>
         <NumberDisplay>{("0" + ((time / 10) % 100)).slice(-2)}</NumberDisplay>
       </div>
-      <div className="buttons p-4">
-        <button
-          className={`text-white capitalize m-4  ${running} : 'text-blue-300' `}
-          onClick={handleKey}
-        >
-          {getStartorStop()}
-        </button>
-        {/* <button onClick={() => setRunning(true)}>Start</button>
-        <button onClick={() => setRunning(false)}>Stop</button> */}
-        <button onClick={() => setTime(0)}>Reset</button>
+      <div className="flex gap-4">
+        <SpaceButton className={`capitalize m-4 `} toggleTime={toggleTime}>
+          {running ? "Stop" : "Start"}
+        </SpaceButton>
+
+        <Button onClick={() => setRunning(false)}>Stop</Button>
+        <Button onClick={() => setTime(0)}>Reset</Button>
       </div>
     </div>
   );

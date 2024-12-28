@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import React, { HTMLAttributes, useEffect, useRef, useState } from "react";
-import { SpaceButton } from "../spacebutton";
+import useSpacebar from "../../hooks/use-spacebar";
 
 const Stopwatch = () => {
   const [time, setTime] = useState(0);
@@ -24,6 +24,8 @@ const Stopwatch = () => {
 
   const changeIfActive = `${running ? "text-blue-300" : "text-white"}`;
 
+  useSpacebar(toggleTime);
+
   return (
     <div className="stopwatch text-white text-center">
       <div className={`numbers capitalize ${changeIfActive}`}>
@@ -34,13 +36,12 @@ const Stopwatch = () => {
         <NumberDisplay>{("0" + ((time / 10) % 100)).slice(-2)}</NumberDisplay>
       </div>
       <div className="flex gap-4">
-        <SpaceButton className={`capitalize m-4 `} toggleTime={toggleTime}>
-          {running ? "Stop" : "Start"}
-        </SpaceButton>
-
-        <Button onClick={() => setRunning(false)}>Stop</Button>
-        <Button onClick={() => setTime(0)}>Reset</Button>
+        {running ? "Stop" : "Press spacebar to toggle the timer"}
       </div>
+      <Button className="bg-red-600" onClick={() => setRunning(false)}>
+        Stop
+      </Button>
+      <Button onClick={() => setTime(0)}>Reset</Button>
     </div>
   );
 };

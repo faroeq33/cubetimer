@@ -1,11 +1,6 @@
 import { useCallback, useEffect } from "react";
-import { SpaceButtonProps } from "./stopwatch/types";
 
-export const SpaceButton = ({
-  children,
-  toggleTime,
-  ...props
-}: SpaceButtonProps) => {
+function useSpacebar(toggleTime: () => void) {
   const handleSpacebar = useCallback(
     (event: KeyboardEvent) => {
       if (event.code === "Space") {
@@ -22,5 +17,6 @@ export const SpaceButton = ({
       window.removeEventListener("keydown", handleSpacebar);
     };
   }, [handleSpacebar]);
-  return <button {...props}>{children}</button>;
-};
+}
+
+export default useSpacebar;

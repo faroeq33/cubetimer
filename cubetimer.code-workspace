@@ -8,7 +8,8 @@
   "extensions": {
     "recommendations": [
       "esbenp.prettier-vscode",
-      "JosefBiehler.cypress-fixture-intellisense"
+      "JosefBiehler.cypress-fixture-intellisense",
+      "shevtsov.vscode-cy-helper"
     ]
   }
 }

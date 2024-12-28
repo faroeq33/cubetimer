@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "build-and-start": "npm run build && npm run start",
     "cypress:open": "cypress open"
   },
   "dependencies": {
@@ -30,6 +30,7 @@
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "postcss": "^8",
+    "start-server-and-test": "^2.0.9",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

@@ -7,12 +7,6 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -26,3 +20,56 @@ Using the shadcn cli we can add components to the project. Be sure to replace `[
 ```bash
 npx shadcn@latest add [component]
 ```
+
+# Project dependancies explanation
+
+The `package.json` contains metadata about the project and lists the dependencies required for the project to run. Below is an explanation of the purpose of each dependency listed in the `package.json` file for the `cubetimer` project.
+
+## Scripts
+
+```bash
+# dev: Runs the development server using Next.js with Turbopack.
+npm run dev
+
+# build: Builds the project for production using Next.js.
+npm run build
+
+# start: Starts the production server using Next.js.
+npm start
+
+# cypress:open: Opens the Cypress test runner.
+npm run cypress:open
+
+# Builds the project and then starts the production server, useful for e2e testing.
+npm run build-and-start
+
+# lint: Lints the codebase using ESLint.
+npm run lint
+```
+## Dependencies
+### Shadcn dependencies:
+- **@radix-ui/react-menubar**: A React component library for building accessible menubars.
+- **@radix-ui/react-slot**: A utility for creating slot-based components in React.
+- **class-variance-authority**: A utility for managing class names in a type-safe way.
+- **clsx**: A utility for constructing `className` strings conditionally.
+- **lucide-react**: A collection of simple and consistent icons for React.
+### Nextjs dependencies:
+- **next**: The Next.js framework for building React applications.
+- **next-themes**: A library for managing themes in Next.js applications.
+- **react**: The core React library for building user interfaces.
+- **react-dom**: The React library for working with the DOM.
+### Frontend dependencies:
+- **tailwind-merge**: A utility for merging Tailwind CSS classes.
+- **tailwindcss-animate**: A plugin for adding animations to Tailwind CSS.
+
+## DevDependencies
+- **@types/node**: TypeScript definitions for Node.js.
+- **@types/react**: TypeScript definitions for React.
+- **@types/react-dom**: TypeScript definitions for React DOM.
+- **cypress**: A testing framework for end-to-end testing.
+- **eslint**: A tool for identifying and fixing problems in JavaScript code.
+- **eslint-config-next**: ESLint configuration for Next.js projects.
+- **postcss**: A tool for transforming CSS with JavaScript plugins.
+- **start-server-and-test**: A utility for starting a server and running tests.
+- **tailwindcss**: A utility-first CSS framework.
+- **typescript**: A superset of JavaScript that adds static types.

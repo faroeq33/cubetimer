@@ -1,14 +1,14 @@
 import { useCallback, useEffect } from "react";
 
-function useSpacebar(toggleTime: () => void) {
+function useSpacebar(callback: () => void) {
   const handleSpacebar = useCallback(
     (event: KeyboardEvent) => {
       if (event.code === "Space") {
-        console.log("pressed");
+        console.info("pressed");
       }
-      toggleTime();
+      callback();
     },
-    [toggleTime]
+    [callback]
   );
 
   useEffect(() => {

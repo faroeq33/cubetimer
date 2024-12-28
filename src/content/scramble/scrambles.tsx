@@ -18,7 +18,9 @@ import useSpacebar from "../../hooks/use-spacebar";
     - current scramble type
 */
 function Scrambles({ ...props }: HTMLAttributes<HTMLDivElement>) {
-  const [scramble, setScramble] = useState(generateScramble(25));
+  const [scramble, setScramble] = useState(
+    "D U2 B L2 U2 D' L' U2 D' B2 L' D' L' B' D' F' B U R' F R' F2 B2 D' F'"
+  );
 
   useSpacebar(() => {
     setScramble(generateScramble(25));

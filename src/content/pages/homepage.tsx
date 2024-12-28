@@ -1,4 +1,4 @@
-import Scrambles from "@/components/ui/scrambles";
+import Scrambles from "@/content/scramble/scrambles";
 import Footer from "../footer";
 import Stopwatch from "../stopwatch/stopwatch";
 

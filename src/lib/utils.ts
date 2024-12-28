@@ -8,6 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export function getRandomElement(arr: string[]) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
+
 export function generateScramble(length: number) {
   const moves = ["U", "D", "L", "R", "F", "B"];
   const modifiers = ["", "'", "2"];

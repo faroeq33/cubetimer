@@ -14,7 +14,7 @@ function Nav() {
     <>
       <Menubar>
         <MenubarMenu>
-          <MenubarTrigger>File</MenubarTrigger>
+          <MenubarTrigger>Home</MenubarTrigger>
           <MenubarContent>
             <MenubarItem>
               New Tab <MenubarShortcut>⌘T</MenubarShortcut>

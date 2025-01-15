@@ -6,7 +6,7 @@ A timer for timing Rubik's cube solves.
 First, run the development server:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -29,22 +29,22 @@ The `package.json` contains metadata about the project and lists the dependencie
 
 ```bash
 # dev: Runs the development server using Next.js with Turbopack.
-npm run dev
+pnpm dev
 
 # build: Builds the project for production using Next.js.
-npm run build
+pnpm build
 
 # start: Starts the production server using Next.js.
-npm start
+pnpm start
 
 # cypress:open: Opens the Cypress test runner.
-npm run cypress:open
+pnpm run cypress:open
 
 # Builds the project and then starts the production server, useful for e2e testing.
-npm run build-and-start
+pnpm run build-and-start
 
 # lint: Lints the codebase using ESLint.
-npm run lint
+pnpm run lint
 ```
 ## Dependencies
 ### Shadcn dependencies:

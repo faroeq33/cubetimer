@@ -1,3 +1,5 @@
+import { mount } from "cypress/react";
+
 /* eslint-disable @typescript-eslint/no-namespace */
 /// <reference types="cypress" />
 // ***********************************************
@@ -23,6 +25,7 @@ declare global {
        * @example cy.dataCy('greeting')
        */
       getDataCy(value: string): Chainable<JQuery<HTMLElement>>;
+      mount: typeof mount;
     }
   }
 }

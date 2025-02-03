@@ -35,10 +35,10 @@ const Stopwatch = () => {
         </NumberDisplay>
         <NumberDisplay>{("0" + ((time / 10) % 100)).slice(-2)}</NumberDisplay>
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-4 bg-pink-500">
         {running ? "Stop" : "Press spacebar to toggle the timer"}
       </div>
-      <Button className="bg-red-600" onClick={() => setRunning(false)}>
+      <Button onClick={() => setRunning(false)} className="mr-4">
         Stop
       </Button>
       <Button onClick={() => setTime(0)}>Reset</Button>

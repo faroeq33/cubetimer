@@ -1,0 +1,1 @@
+- Add a way to not allow merging with main if cypress test fail or to run test when pushing

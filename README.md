@@ -28,17 +28,21 @@ The `package.json` contains metadata about the project and lists the dependencie
 ## Scripts
 
 ```bash
-# dev: Runs the development server using Next.js with Turbopack.
+# Runs the development server using Next.js with Turbopack.
 pnpm dev
 
-# build: Builds the project for production using Next.js.
+# Builds the project for production using Next.js.
 pnpm build
 
-# start: Starts the production server using Next.js.
+# Starts the production server using Next.js.
 pnpm start
 
-# cypress:open: Opens the Cypress test runner.
+# Opens the Cypress test runner.
 pnpm run cypress:open
+
+# Opens the Cypress test runner.
+# TODO: fix this
+pnpm run test
 
 # Builds the project and then starts the production server, useful for e2e testing.
 pnpm run build-and-start

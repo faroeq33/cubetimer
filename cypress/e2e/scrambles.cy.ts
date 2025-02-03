@@ -3,7 +3,7 @@ describe("Scramble functionality", () => {
     cy.visit("/"); // base url configured in cypress.config.ts
   });
 
-  it.skip("should show a different scramble when pressing spacebar", () => {
+  it("should show a different scramble when pressing spacebar", () => {
     let firstScramble: string;
 
     cy.getDataCy("scramble")

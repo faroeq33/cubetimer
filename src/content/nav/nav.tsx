@@ -26,7 +26,7 @@ function Nav() {
             <MenubarItem>Print</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
-      </Menubar>{" "}
+      </Menubar>
     </>
   );
 }
